@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이모지 운세 - EmojiRibbit 🍿</title>
+    <meta
+      name="description"
+      content="지금 내 감정으로 보는 이모지 운세! 나의 감정을 나타내는 이모지를 선택하고 오늘의 운세를 확인하세요."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/icon/favicon.ico" />
+    <link rel="icon" type="image/png" href="assets/images/icon/favicon.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/commons.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/interactions.css" />
+    <link rel="stylesheet" href="assets/css/fortune.css" />
+  </head>
+
+  <body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header__inner">
+          <!-- Logo -->
+          <a href="index.html" class="site-logo" aria-label="EmojiRibbit 홈">
+            🐸 EmojiRibbit
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="site-nav" data-nav role="navigation" aria-label="메인 메뉴">
+            <a href="dictionary.html" class="site-nav__link" aria-label="이모지 사전">
+              📖 이모지 사전
+            </a>
+            <a href="copy-tool.html" class="site-nav__link" aria-label="복사 도구">
+              📋 복사 도구
+            </a>
+            <div class="site-nav-group">
+              <a href="hashtags.html" class="site-nav__link" aria-label="해시태그 모음집">
+                #️⃣ 해시태그 모음집
+              </a>
+              <a href="insta-font.html" class="site-nav__link site-nav__link--sub" aria-label="인스타 폰트">
+                ✨ 인스타 폰트
+              </a>
+            </div>
+            <div class="site-nav-group">
+              <a href="decofont.html" class="site-nav__link" aria-label="데코폰트">
+                ✨ 데코폰트
+              </a>
+              <a href="dotart.html" class="site-nav__link site-nav__link--sub" aria-label="도트 아트">
+                • 도트 아트
+              </a>
+            </div>
+            <a href="fortune.html" class="site-nav__link site-nav__link--active" aria-label="이모지 운세">
+              🔮 이모지 운세
+            </a>
+          </nav>
+
+          <!-- Search Bar (Desktop) -->
+          <div class="search-wrapper" role="search">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="검색... (예: 하트, 동물)"
+              aria-label="이모지 및 특수문자 검색"
+            />
+            <button class="search-btn" aria-label="검색 버튼">🔍</button>
+          </div>
+
+          <!-- Dark Mode Toggle -->
+          <button
+            class="theme-toggle"
+            data-theme-toggle
+            aria-label="다크 모드 전환"
+            aria-pressed="false"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="nav-toggle"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-label="메뉴 열기"
+          >
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Fortune Hero Section -->
+    <section class="fortune-hero">
+      <div class="fortune-hero__overlay"></div>
+
+      <div class="container">
+        <div class="fortune-hero__content">
+          <!-- Step Indicator -->
+          <div class="fortune-steps">
+            <div class="fortune-step">
+              <span class="fortune-step__number">1</span>
+              <span class="fortune-step__label">감정 선택</span>
+            </div>
+            <div class="fortune-step__line"></div>
+            <div class="fortune-step">
+              <span class="fortune-step__number">2</span>
+              <span class="fortune-step__label">운세 확인</span>
+            </div>
+          </div>
+
+          <!-- Title -->
+          <h1 class="fortune-hero__title" data-aos="fade-up" data-aos-delay="100">
+            이모지 운세
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="fortune-hero__subtitle" data-aos="fade-up" data-aos-delay="200">
+            현재 내 감정과 가장 가까운 이모지를 선택하면<br />
+            오늘의 운세를 알려드려요.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fortune Main Section -->
+    <section class="fortune-main" id="fortune-main">
+      <div class="container">
+        <!-- Mood Selection Section (visible initially) -->
+        <div class="fortune-mood-section" id="fortune-mood-section">
+          <h2 class="fortune-mood-title">지금 내 감정은?</h2>
+
+          <div class="fortune-mood-grid" id="fortune-mood-grid">
+            <!-- Mood buttons populated by JavaScript -->
+          </div>
+
+          <!-- Selected Mood Display -->
+          <div class="fortune-selected-mood" id="fortune-selected-mood" style="display: none;">
+            <p class="fortune-selected-mood-text">
+              선택된 감정: <span id="selected-mood-emoji"></span> <span id="selected-mood-label"></span>
+            </p>
+          </div>
+
+          <!-- Get Fortune Button -->
+          <div class="fortune-button-wrapper">
+            <button class="btn btn--primary-gradient fortune-btn" id="get-fortune-btn">
+              운세 보기
+            </button>
+          </div>
+        </div>
+
+        <!-- Loading State (hidden initially) -->
+        <div class="fortune-loading" id="fortune-loading" style="display: none;">
+          <div class="fortune-loading__spinner">
+            <div class="fortune-spinner"></div>
+          </div>
+          <p class="fortune-loading__text">별자리와 이모지를 분석하는 중...</p>
+        </div>
+
+        <!-- Result Section (hidden initially) -->
+        <div class="fortune-result" id="fortune-result" style="display: none;">
+          <!-- Result Cards -->
+          <div class="fortune-result-cards">
+            <!-- Message Card -->
+            <div class="fortune-result-card fortune-message-card">
+              <div class="fortune-result-card__label">오늘의 한마디</div>
+              <p class="fortune-result-card__content" id="fortune-message"></p>
+            </div>
+
+            <!-- Advice Card -->
+            <div class="fortune-result-card fortune-advice-card">
+              <div class="fortune-result-card__label">오늘의 조언</div>
+              <p class="fortune-result-card__content" id="fortune-advice"></p>
+            </div>
+          </div>
+
+          <!-- Result Action Buttons -->
+          <div class="fortune-result-actions">
+            <button class="btn btn--secondary" id="copy-fortune-btn">
+              📋 운세 복사
+            </button>
+            <button class="btn btn--outline" id="reset-fortune-btn">
+              🔄 다시 선택
+            </button>
+            <a href="dictionary.html" class="btn btn--secondary-glow">
+              📖 이모지 사전 보기
+            </a>
+          </div>
+        </div>
+
+        <!-- Share Section (shown after result) -->
+        <div class="fortune-share" id="fortune-share" style="display: none;">
+          <h3 class="fortune-share__title">친구에게 공유하기</h3>
+          <div class="fortune-share__card">
+            <p class="fortune-share__text">
+              "오늘의 이모지 운세를 함께 확인해보세요! 🔮"
+            </p>
+            <button class="btn btn--secondary fortune-share-copy-btn" id="share-copy-btn">
+              공유 텍스트 복사
+            </button>
+          </div>
+        </div>
+
+        <!-- Try Again Section -->
+        <div class="fortune-try-again" id="fortune-try-again" style="display: none;">
+          <p class="fortune-try-again__text">다른 감정으로 다시 볼까요?</p>
+          <button class="btn btn--outline" id="try-again-btn">
+            다시 선택하기
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section class="fortune-disclaimer">
+      <div class="container">
+        <p class="fortune-disclaimer__text">
+          ✨ 본 운세는 재미로만 즐기세요
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__content">
+          <div class="site-footer__section">
+            <div class="site-footer__logo">🐸 EmojiRibbit</div>
+            <p class="site-footer__description">
+              세상의 모든 이모지를 한 곳에서. 의미 사전, 복사 도구, 세대별 트렌드, 이모지 운세까지 완전 무료.
+            </p>
+          </div>
+
+          <div class="site-footer__section">
+            <h3 class="site-footer__heading">서비스</h3>
+            <ul class="site-footer__list">
+              <li><a href="dictionary.html">이모지 사전</a></li>
+              <li><a href="copy-tool.html">복사 도구</a></li>
+              <li><a href="fortune.html">이모지 운세</a></li>
+              <li><a href="trends.html">세대별 트렌드</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer__section">
+            <h3 class="site-footer__heading">카테고리</h3>
+            <ul class="site-footer__list">
+              <li><a href="#">감정 이모지</a></li>
+              <li><a href="#">자연 이모지</a></li>
+              <li><a href="#">음식 이모지</a></li>
+              <li><a href="#">MBTI 이모지</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer__section">
+            <h3 class="site-footer__heading">정보</h3>
+            <ul class="site-footer__list">
+              <li><a href="privacy.html">개인정보처리방침</a></li>
+              <li><a href="terms.html">이용약관</a></li>
+              <li><a href="about.html">소개</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>&copy; 2025 EmojiRibbit · All rights reserved</p>
+          <p>이모지는 Unicode 표준을 따릅니다</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/fortune.js"></script>
+  </body>
+</html>

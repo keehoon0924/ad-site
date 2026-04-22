@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>데코폰트 - EmojiRibbit ✨</title>
+    <meta
+      name="description"
+      content="글자 위에 특수문자를 결합해 특별한 텍스트를 만들 수 있어요. 다양한 장식 스타일 중에서 선택해서 바로 복사하세요."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/icon/favicon.ico" />
+    <link rel="icon" type="image/png" href="assets/images/icon/favicon.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/commons.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/interactions.css" />
+    <link rel="stylesheet" href="assets/css/decofont.css" />
+  </head>
+
+  <body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header__inner">
+          <!-- Logo -->
+          <a href="index.html" class="site-logo" aria-label="EmojiRibbit 홈">
+            🐸 EmojiRibbit
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="site-nav" data-nav role="navigation" aria-label="메인 메뉴">
+            <a href="dictionary.html" class="site-nav__link" aria-label="이모지 사전">
+              📖 이모지 사전
+            </a>
+            <a href="copy-tool.html" class="site-nav__link" aria-label="복사 도구">
+              📋 복사 도구
+            </a>
+            <div class="site-nav-group">
+              <a href="hashtags.html" class="site-nav__link" aria-label="해시태그 모음집">
+                #️⃣ 해시태그 모음집
+              </a>
+              <a href="insta-font.html" class="site-nav__link site-nav__link--sub" aria-label="인스타 폰트">
+                ✨ 인스타 폰트
+              </a>
+            </div>
+            <div class="site-nav-group">
+              <a href="decofont.html" class="site-nav__link site-nav__link--active" aria-label="데코폰트">
+                ✨ 데코폰트
+              </a>
+              <a href="dotart.html" class="site-nav__link site-nav__link--sub" aria-label="도트 아트">
+                • 도트 아트
+              </a>
+            </div>
+            <a href="fortune.html" class="site-nav__link" aria-label="이모지 운세">
+              🔮 이모지 운세
+            </a>
+          </nav>
+
+          <!-- Search Bar (Desktop) -->
+          <div class="search-wrapper" role="search">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="검색... (예: 하트, 동물)"
+              aria-label="이모지 및 특수문자 검색"
+            />
+            <button class="search-btn" aria-label="검색 버튼">🔍</button>
+          </div>
+
+          <!-- Dark Mode Toggle -->
+          <button
+            class="theme-toggle"
+            data-theme-toggle
+            aria-label="다크 모드 전환"
+            aria-pressed="false"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="nav-toggle"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-label="메뉴 열기"
+          >
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Decofont Intro Section -->
+    <section class="decofont-intro">
+      <div class="container">
+        <div class="decofont-intro__content">
+          <h1 class="decofont-intro__title">데코폰트</h1>
+          <p class="decofont-intro__subtitle">
+            글자 위에 다양한 특수문자를 결합해<br />
+            특별한 텍스트를 만들 수 있어요.
+          </p>
+          <p class="decofont-intro__description">
+            원하는 문장을 입력하고 장식 스타일을 골라 바로 복사해보세요.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decofont Main Section -->
+    <section class="decofont-main" id="decofont-main">
+      <div class="container">
+        
+        <!-- Text Input Area -->
+        <div class="decofont-input-card">
+          <h2 class="decofont-input-card__title">텍스트 입력</h2>
+          <textarea
+            id="decofont-input"
+            class="decofont-input-field"
+            placeholder="꾸미고 싶은 문장을 입력하세요"
+            aria-label="데코폰트 입력 필드"
+            rows="3"
+          ></textarea>
+          <p class="decofont-input-hint">한국어, 영어, 숫자 모두 가능합니다.</p>
+        </div>
+
+        <!-- Decoration Styles List -->
+        <div class="decofont-styles-card">
+          <h2 class="decofont-styles-card__title">장식 스타일 선택</h2>
+          <p class="decofont-styles-card__subtitle">원하는 스타일을 클릭해서 선택하세요</p>
+          
+          <div class="decofont-styles-grid" id="decofont-styles-grid">
+            <!-- Styles will be populated by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Convert Button -->
+        <div class="decofont-action-area">
+          <button class="btn btn--primary-gradient decofont-convert-btn" id="decofont-convert-btn">
+            ✨ 변환하기
+          </button>
+        </div>
+
+        <!-- Result Area -->
+        <div class="decofont-result-card" id="decofont-result-card">
+          <h2 class="decofont-result-card__title">변환 결과를 확인해 보세요!</h2>
+          
+          <div class="decofont-result-box" id="decofont-result-box">
+            <p class="decofont-result-empty">아직 결과가 없습니다. 텍스트를 입력하고 변환해보세요.</p>
+          </div>
+
+          <div class="decofont-result-actions">
+            <button class="btn btn--secondary decofont-reset-btn" id="decofont-reset-btn" disabled>
+              🔄 초기화
+            </button>
+            <button class="btn btn--primary-gradient decofont-copy-btn" id="decofont-copy-btn" disabled>
+              📋 복사
+            </button>
+          </div>
+        </div>
+
+        <!-- Usage Tips -->
+        <div class="decofont-tips-card">
+          <h2 class="decofont-tips-card__title">사용 팁</h2>
+          <ul class="decofont-tips-list">
+            <li>변환할 텍스트를 입력하세요.</li>
+            <li>장식 스타일 중 원하는 것을 선택하고 "변환하기" 버튼을 누르세요.</li>
+            <li>복사 후 SNS, 메신저, 블로그 등 원하는 곳에 붙여 넣어 사용하세요.</li>
+            <li>일부 장식 문자는 기기나 브라우저에 따라 다르게 보일 수 있어요.</li>
+            <li>영어 소문자에서 더 자연스럽게 보일 수 있어요.</li>
+            <li>너무 많은 장식을 겹치면 텍스트가 보이기 어려울 수 있습니다.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__content">
+          <div class="site-footer__section">
+            <div class="site-footer__logo">🐸 EmojiRibbit</div>
+            <p class="site-footer__description">
+              세상의 모든 이모지를 한 곳에서. 의미 사전, 복사 도구, 해시태그 모음집, 데코폰트, 이모지 운세까지 완전 무료.
+            </p>
+          </div>
+
+          <div class="site-footer__section">
+            <h3 class="site-footer__heading">서비스</h3>
+            <ul class="site-footer__list">
+              <li><a href="dictionary.html">이모지 사전</a></li>
+              <li><a href="copy-tool.html">복사 도구</a></li>
+              <li><a href="hashtags.html">해시태그 모음집</a></li>
+              <li><a href="decofont.html">데코폰트</a></li>
+              <li><a href="fortune.html">이모지 운세</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer__section">
+            <h3 class="site-footer__heading">카테고리</h3>
+            <ul class="site-footer__list">
+              <li><a href="#">감정 이모지</a></li>
+              <li><a href="#">자연 이모지</a></li>
+              <li><a href="#">음식 이모지</a></li>
+              <li><a href="#">MBTI 이모지</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer__section">
+            <h3 class="site-footer__heading">정보</h3>
+            <ul class="site-footer__list">
+              <li><a href="privacy.html">개인정보처리방침</a></li>
+              <li><a href="terms.html">이용약관</a></li>
+              <li><a href="about.html">소개</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>&copy; 2025 EmojiRibbit · All rights reserved</p>
+          <p>이모지는 Unicode 표준을 따릅니다</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/decofont.js"></script>
+  </body>
+</html>

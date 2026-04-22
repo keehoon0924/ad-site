@@ -1,0 +1,638 @@
+/* ============================================
+   DOTART PAGE STYLES
+   ============================================ */
+
+/* Intro Section */
+.dotart-intro {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dotart-intro__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dotart-intro__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  word-break: keep-all;
+}
+
+.dotart-intro__subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  opacity: 0.95;
+}
+
+.dotart-intro__description {
+  font-size: 0.95rem;
+  font-weight: 300;
+  opacity: 0.85;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dotart-intro {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .dotart-intro__title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .dotart-intro__subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Main Section */
+.dotart-main {
+  padding: 40px 20px;
+  min-height: calc(100vh - 300px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Upload Card */
+.dotart-upload-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+[data-theme="dark"] .dotart-upload-card {
+  background: #1a1a1a;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dotart-upload-card__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+[data-theme="dark"] .dotart-upload-card__title {
+  color: #fff;
+}
+
+/* Upload Box */
+.dotart-upload-box {
+  border: 2px dashed #ddd;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+[data-theme="dark"] .dotart-upload-box {
+  border-color: #444;
+  background: #2a2a2a;
+}
+
+.dotart-upload-box:hover {
+  border-color: #667eea;
+  background: #f0f0ff;
+}
+
+[data-theme="dark"] .dotart-upload-box:hover {
+  background: #333;
+}
+
+.dotart-upload-box__icon {
+  font-size: 3rem;
+  margin: 0 0 15px 0;
+}
+
+.dotart-upload-box__text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+[data-theme="dark"] .dotart-upload-box__text {
+  color: #fff;
+}
+
+.dotart-upload-box__hint {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0 0 20px 0;
+}
+
+[data-theme="dark"] .dotart-upload-box__hint {
+  color: #888;
+}
+
+.dotart-upload-btn {
+  padding: 10px 30px;
+}
+
+/* Image Preview */
+.dotart-preview {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+[data-theme="dark"] .dotart-preview {
+  border-color: #444;
+  background: #2a2a2a;
+}
+
+.dotart-preview__img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .dotart-upload-card {
+    padding: 20px;
+  }
+  
+  .dotart-upload-box {
+    padding: 30px 15px;
+  }
+  
+  .dotart-upload-box__icon {
+    font-size: 2rem;
+  }
+}
+
+/* Options Card */
+.dotart-options-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+[data-theme="dark"] .dotart-options-card {
+  background: #1a1a1a;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dotart-options-card__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 25px 0;
+}
+
+[data-theme="dark"] .dotart-options-card__title {
+  color: #fff;
+}
+
+/* Option Group */
+.dotart-option-group {
+  margin-bottom: 25px;
+}
+
+.dotart-option-group:last-child {
+  margin-bottom: 0;
+}
+
+.dotart-option-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+[data-theme="dark"] .dotart-option-label {
+  color: #fff;
+}
+
+.dotart-option-value {
+  float: right;
+  background: #667eea;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.dotart-option-hint {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 8px;
+}
+
+[data-theme="dark"] .dotart-option-hint {
+  color: #888;
+}
+
+/* Style Buttons */
+.dotart-style-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dotart-style-btn {
+  flex: 1;
+  min-width: 80px;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .dotart-style-btn {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dotart-style-btn:hover {
+  border-color: #667eea;
+  background: #f0f0ff;
+}
+
+[data-theme="dark"] .dotart-style-btn:hover {
+  border-color: #667eea;
+  background: #333;
+}
+
+.dotart-style-btn--active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+/* Slider */
+.dotart-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-bottom: 8px;
+}
+
+[data-theme="dark"] .dotart-slider {
+  background: #444;
+}
+
+.dotart-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.dotart-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Toggle Switch */
+.dotart-toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dotart-toggle-input {
+  display: none;
+}
+
+.dotart-toggle-switch {
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  background: #ddd;
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .dotart-toggle-switch {
+  background: #444;
+}
+
+.dotart-toggle-switch::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+}
+
+.dotart-toggle-input:checked + .dotart-toggle-switch {
+  background: #667eea;
+}
+
+.dotart-toggle-input:checked + .dotart-toggle-switch::after {
+  left: 22px;
+}
+
+.dotart-toggle-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+}
+
+[data-theme="dark"] .dotart-toggle-text {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .dotart-options-card {
+    padding: 20px;
+  }
+  
+  .dotart-style-buttons {
+    gap: 8px;
+  }
+  
+  .dotart-style-btn {
+    min-width: 70px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Action Area */
+.dotart-action-area {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dotart-convert-btn {
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Result Card */
+.dotart-result-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+[data-theme="dark"] .dotart-result-card {
+  background: #1a1a1a;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dotart-result-card__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+[data-theme="dark"] .dotart-result-card__title {
+  color: #fff;
+}
+
+/* Result Container */
+.dotart-result-container {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+[data-theme="dark"] .dotart-result-container {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dotart-result-box {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #333;
+  white-space: pre;
+  word-break: break-all;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+[data-theme="dark"] .dotart-result-box {
+  color: #e0e0e0;
+}
+
+.dotart-result-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn--secondary {
+  background: #e0e0e0;
+  color: #333;
+}
+
+[data-theme="dark"] .btn--secondary {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background: #ccc;
+  transform: translateY(-2px);
+}
+
+.btn--primary-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn--primary-gradient:hover:not(:disabled) {
+  background: linear-gradient(135deg, #5568d3 0%, #693a96 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Tips Card */
+.dotart-tips-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  border-left: 4px solid #667eea;
+}
+
+[data-theme="dark"] .dotart-tips-card {
+  background: #1a1a1a;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dotart-tips-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+[data-theme="dark"] .dotart-tips-card__title {
+  color: #fff;
+}
+
+.dotart-tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dotart-tips-list li {
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+[data-theme="dark"] .dotart-tips-list li {
+  color: #aaa;
+}
+
+.dotart-tips-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: 700;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+  z-index: 1000;
+  max-width: 300px;
+  word-break: break-word;
+}
+
+.toast--success {
+  background: #4caf50;
+}
+
+.toast--error {
+  background: #f44336;
+}
+
+.toast--warning {
+  background: #ff9800;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .dotart-result-card {
+    padding: 20px;
+  }
+  
+  .dotart-result-box {
+    font-size: 9px;
+    max-height: 300px;
+  }
+  
+  .dotart-result-actions {
+    gap: 10px;
+  }
+  
+  .btn {
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  .toast {
+    bottom: 90px;
+    right: 10px;
+    left: 10px;
+  }
+}

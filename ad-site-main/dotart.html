@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도트 아트 - EmojiRibbit 🎨</title>
+    <meta
+      name="description"
+      content="이미지를 도트 실루엣의 아스키 아트로 변환하세요. 스타일, 정밀도, 크기 등을 조절해 원하는 도트 아트를 만들어 복사하세요."
+    />
+
+    <!-- ================== 기본 메타 태그 (SEO) ================== -->
+    <meta name="title" content="도트 아트 - EmojiRibbit 🎨">
+    <meta name="keywords" content="도트 아트, 아스키 아트, 이미지 변환, 문자 아트, 도트 아트 생성">
+    <meta name="author" content="EmojiRibbit">
+    <meta name="robots" content="index, follow">
+
+    <!-- ================== Open Graph 메타 태그 ================== -->
+    <meta property="og:title" content="도트 아트 - EmojiRibbit 🎨">
+    <meta property="og:description" content="이미지를 도트 실루엣의 아스키 아트로 변환하세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emojiribbit.com/dotart.html">
+    <meta property="og:image" content="https://emojiribbit.com/assets/images/og-image.png">
+    <meta property="og:site_name" content="EmojiRibbit">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- ================== Twitter 카드 메타 태그 ================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="도트 아트 - EmojiRibbit 🎨">
+    <meta name="twitter:description" content="이미지를 도트 실루엣의 아스키 아트로 변환하세요.">
+
+    <!-- ================== SEO 및 사용자 경험 보완 태그 ================== -->
+    <meta name="language" content="ko">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://emojiribbit.com/dotart.html">
+
+    <!-- ================== 웹앱 및 브라우저 최적화 ================== -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="application-name" content="EmojiRibbit">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="EmojiRibbit">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/icon/favicon.ico" />
+    <link rel="icon" type="image/png" href="assets/images/icon/favicon.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/commons.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/interactions.css" />
+    <link rel="stylesheet" href="assets/css/dotart.css" />
+  </head>
+
+  <body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header__inner">
+          <!-- Logo -->
+          <a href="index.html" class="site-logo" aria-label="EmojiRibbit 홈">
+            🐸 EmojiRibbit
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="site-nav" data-nav role="navigation" aria-label="메인 메뉴">
+            <a href="dictionary.html" class="site-nav__link" aria-label="이모지 사전">
+              📖 이모지 사전
+            </a>
+            <a href="copy-tool.html" class="site-nav__link" aria-label="복사 도구">
+              📋 복사 도구
+            </a>
+            <div class="site-nav-group">
+              <a href="hashtags.html" class="site-nav__link" aria-label="해시태그 모음집">
+                #️⃣ 해시태그 모음집
+              </a>
+              <a href="insta-font.html" class="site-nav__link site-nav__link--sub" aria-label="인스타 폰트">
+                ✨ 인스타 폰트
+              </a>
+            </div>
+            <div class="site-nav-group">
+              <a href="decofont.html" class="site-nav__link" aria-label="데코폰트">
+                ✨ 데코폰트
+              </a>
+              <a href="dotart.html" class="site-nav__link site-nav__link--sub site-nav__link--active" aria-label="도트 아트">
+                • 도트 아트
+              </a>
+            </div>
+            <a href="fortune.html" class="site-nav__link" aria-label="이모지 운세">
+              🔮 이모지 운세
+            </a>
+          </nav>
+
+          <!-- Search Bar (Desktop) -->
+          <div class="search-wrapper" role="search">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="검색... (예: 하트, 동물)"
+              aria-label="이모지 및 특수문자 검색"
+            />
+            <button class="search-btn" aria-label="검색 버튼">🔍</button>
+          </div>
+
+          <!-- Dark Mode Toggle -->
+          <button
+            class="theme-toggle"
+            data-theme-toggle
+            aria-label="다크 모드 전환"
+            aria-pressed="false"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="nav-toggle"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-label="메뉴 열기"
+          >
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dotart Intro Section -->
+    <section class="dotart-intro">
+      <div class="container">
+        <div class="dotart-intro__content">
+          <h1 class="dotart-intro__title">도트 아트</h1>
+          <p class="dotart-intro__subtitle">
+            이미지를 도트 실루엣의 문자 아트로 변환해보세요.
+          </p>
+          <p class="dotart-intro__description">
+            이미지 업로드 후 스타일과 옵션을 선택하면 복사 가능한 문자 아트가 생성됩니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dotart Main Section -->
+    <section class="dotart-main" id="dotart-main">
+      <div class="container">
+        
+        <!-- Upload Area -->
+        <div class="dotart-upload-card">
+          <h2 class="dotart-upload-card__title">이미지 업로드</h2>
+          
+          <div class="dotart-upload-box" id="dotart-upload-box">
+            <input 
+              type="file" 
+              id="dotart-image-input" 
+              accept="image/png, image/jpeg, image/webp" 
+              style="display: none;"
+              aria-label="이미지 파일 선택"
+            />
+            <p class="dotart-upload-box__icon">🖼️</p>
+            <p class="dotart-upload-box__text">
+              이미지를 여기에 드래그하거나 클릭해서 업로드하세요
+            </p>
+            <p class="dotart-upload-box__hint">PNG, JPG, WebP 지원</p>
+            <button class="btn btn--primary-gradient dotart-upload-btn" id="dotart-upload-btn">
+              파일 선택
+            </button>
+          </div>
+
+          <!-- Image Preview -->
+          <div class="dotart-preview" id="dotart-preview" style="display: none;">
+            <img id="dotart-preview-img" src="" alt="미리보기" class="dotart-preview__img" />
+          </div>
+        </div>
+
+        <!-- Options Panel -->
+        <div class="dotart-options-card">
+          <h2 class="dotart-options-card__title">옵션 설정</h2>
+          
+          <!-- Style Selection -->
+          <div class="dotart-option-group">
+            <label class="dotart-option-label">스타일 선택</label>
+            <div class="dotart-style-buttons">
+              <button class="dotart-style-btn dotart-style-btn--active" data-style="basic" title="기본 스타일">
+                기본
+              </button>
+              <button class="dotart-style-btn" data-style="outline" title="외곽선 대비">
+                외곽선
+              </button>
+              <button class="dotart-style-btn" data-style="simple" title="단순화">
+                단순
+              </button>
+              <button class="dotart-style-btn" data-style="solid" title="디더링 없음">
+                고대비
+              </button>
+            </div>
+          </div>
+
+          <!-- Precision Slider -->
+          <div class="dotart-option-group">
+            <label class="dotart-option-label">
+              정밀도 조절
+              <span class="dotart-option-value" id="precision-value">50</span>
+            </label>
+            <input 
+              type="range" 
+              id="dotart-precision" 
+              class="dotart-slider"
+              min="10" 
+              max="100" 
+              value="50" 
+              aria-label="정밀도 조절 슬라이더"
+            />
+            <p class="dotart-option-hint">세밀한 정도를 뜻해요</p>
+          </div>
+
+          <!-- Width Slider -->
+          <div class="dotart-option-group">
+            <label class="dotart-option-label">
+              가로 크기
+              <span class="dotart-option-value" id="width-value">50</span>
+            </label>
+            <input 
+              type="range" 
+              id="dotart-width" 
+              class="dotart-slider"
+              min="20" 
+              max="150" 
+              value="50" 
+              aria-label="가로 크기 조절 슬라이더"
+            />
+            <p class="dotart-option-hint">카카오톡용 적정 값: 20~25</p>
+          </div>
+
+          <!-- Background Invert -->
+          <div class="dotart-option-group">
+            <label class="dotart-toggle-label">
+              <input 
+                type="checkbox" 
+                id="dotart-invert" 
+                class="dotart-toggle-input"
+                aria-label="배경 반전"
+              />
+              <span class="dotart-toggle-switch"></span>
+              <span class="dotart-toggle-text">배경 반전</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Convert Button -->
+        <div class="dotart-action-area">
+          <button class="btn btn--primary-gradient dotart-convert-btn" id="dotart-convert-btn">
+            🎨 도트 아트 생성
+          </button>
+        </div>
+
+        <!-- Result Area -->
+        <div class="dotart-result-card" id="dotart-result-card">
+          <h2 class="dotart-result-card__title">사용자 도트 아트</h2>
+          
+          <div class="dotart-result-container">
+            <pre class="dotart-result-box" id="dotart-result-box">
+준비가 완료되었습니다.
+이미지를 업로드하고 옵션을 설정한 후
+"도트 아트 생성" 버튼을 클릭하세요.
+            </pre>
+          </div>
+
+          <div class="dotart-result-actions">
+            <button class="btn btn--secondary dotart-reset-btn" id="dotart-reset-btn" disabled>
+              🔄 초기화
+            </button>
+            <button class="btn btn--primary-gradient dotart-copy-btn" id="dotart-copy-btn" disabled>
+              📋 복사
+            </button>
+          </div>
+        </div>
+
+        <!-- Usage Tips -->
+        <div class="dotart-tips-card">
+          <h2 class="dotart-tips-card__title">사용 팁</h2>
+          <ul class="dotart-tips-list">
+            <li>배경이 단순한 이미지가 더 잘 변환됩니다.</li>
+            <li>가로 크기가 너무 크면 결과가 길어질 수 있습니다.</li>
+            <li>일부 문자 정렬은 기기/앱에 따라 다르게 보일 수 있습니다.</li>
+            <li>카카오톡/메신저용은 가로 폭 20~25 권장입니다.</li>
+            <li>높은 정밀도는 결과가 더 상세하지만 길어질 수 있습니다.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__content">
+          <div class="site-footer__section">
+            <div class="site-footer__logo">🐸 EmojiRibbit</div>
+            <p class="site-footer__description">
+              세상의 모든 이모지를 한 곳에서. 의미 사전, 복사 도구, 해시태그 모음집, 데코폰트, 도트 아트, 이모지 운세까지 완전 무료.
+            </p>
+          </div>
+
+          <div class="site-footer__section">
+            <h3 class="site-footer__heading">서비스</h3>
+            <ul class="site-footer__list">
+              <li><a href="dictionary.html">이모지 사전</a></li>
+              <li><a href="copy-tool.html">복사 도구</a></li>
+              <li><a href="hashtags.html">해시태그 모음집</a></li>
+              <li><a href="decofont.html">데코폰트</a></li>
+              <li><a href="dotart.html">도트 아트</a></li>
+              <li><a href="fortune.html">이모지 운세</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer__section">
+            <h3 class="site-footer__heading">정보</h3>
+            <ul class="site-footer__list">
+              <li><a href="privacy.html">개인정보처리방침</a></li>
+              <li><a href="terms.html">이용약관</a></li>
+              <li><a href="about.html">소개</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>&copy; 2025 EmojiRibbit · All rights reserved</p>
+          <p>이모지는 Unicode 표준을 따릅니다</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/dotart.js"></script>
+  </body>
+</html>

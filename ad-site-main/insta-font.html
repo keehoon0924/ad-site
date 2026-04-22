@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- ================== 기본 메타 태그 (SEO) ================== -->
+    <meta name="title" content="인스타 폰트 - 다양한 유니코드 스타일 텍스트 생성 도구">
+    <meta name="description" content="입력한 텍스트를 다양한 유니코드 폰트 스타일로 자동 변환하세요. 인스타그램, SNS 게시물에 바로 사용 가능한 스타일 텍스트를 생성합니다.">
+    <meta name="keywords" content="인스타폰트, 폰트변환, 유니코드, 텍스트스타일, 인스타그램, 소셜미디어">
+    <meta name="author" content="EmojiRibbit">
+    <meta name="robots" content="index, follow">
+
+    <!-- ================== Open Graph 메타 태그 (SNS 공유) ================== -->
+    <meta property="og:title" content="인스타 폰트 - 다양한 유니코드 스타일 텍스트 생성">
+    <meta property="og:description" content="입력한 텍스트를 다양한 스타일의 유니코드 폰트로 변환해보세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emojiribbit.com/insta-font.html">
+    <meta property="og:image" content="https://emojiribbit.com/assets/images/og-image.png">
+    <meta property="og:site_name" content="EmojiRibbit">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- ================== Twitter 카드 메타 태그 ================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="인스타 폰트 - 텍스트 스타일 변환">
+    <meta name="twitter:description" content="다양한 유니코드 폰트 스타일로 텍스트를 변환하세요.">
+    <meta name="twitter:image" content="https://emojiribbit.com/assets/images/twitter-image.png">
+
+    <!-- ================== SEO 및 사용자 경험 보완 태그 ================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="ko">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://emojiribbit.com/insta-font.html">
+
+    <!-- ================== 웹앱 및 브라우저 최적화 ================== -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="application-name" content="EmojiRibbit">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="EmojiRibbit">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/icon/favicon.ico" />
+    <link rel="icon" type="image/png" href="assets/images/icon/favicon.png" />
+
+    <title>인스타 폰트 - EmojiRibbit 🍿</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/commons.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/interactions.css" />
+    <link rel="stylesheet" href="assets/css/insta-font.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- ==================== HEADER ==================== -->
+      <header class="site-header">
+        <div class="header-container">
+          <!-- Logo -->
+          <div class="site-logo">
+            <a href="index.html" aria-label="EmojiRibbit 홈페이지">
+              🍿 EmojiRibbit
+            </a>
+          </div>
+
+          <!-- Navigation -->
+          <div class="header-actions">
+            <!-- Navigation Menu -->
+            <nav class="site-nav" data-nav role="navigation" aria-label="메인 메뉴">
+              <a href="dictionary.html" class="site-nav__link" aria-label="이모지 사전">
+                📖 이모지 사전
+              </a>
+              <a href="copy-tool.html" class="site-nav__link" aria-label="복사 도구">
+                📋 복사 도구
+              </a>
+              <div class="site-nav-group">
+                <a href="hashtags.html" class="site-nav__link" aria-label="해시태그 모음집">
+                  #️⃣ 해시태그 모음집
+                </a>
+                <a href="insta-font.html" class="site-nav__link site-nav__link--sub site-nav__link--active" aria-label="인스타 폰트">
+                  ✨ 인스타 폰트
+                </a>
+              </div>
+              <div class="site-nav-group">
+                <a href="decofont.html" class="site-nav__link" aria-label="데코폰트">
+                  ✨ 데코폰트
+                </a>
+                <a href="dotart.html" class="site-nav__link site-nav__link--sub" aria-label="도트 아트">
+                  • 도트 아트
+                </a>
+              </div>
+              <a href="fortune.html" class="site-nav__link" aria-label="이모지 운세">
+                🔮 이모지 운세
+              </a>
+            </nav>
+
+            <!-- Search Bar (Desktop) -->
+            <div class="search-wrapper" role="search">
+              <input
+                type="search"
+                class="search-input"
+                placeholder="검색..."
+                aria-label="사이트 검색"
+              />
+              <button class="search-btn" aria-label="검색 버튼">
+                🔍
+              </button>
+            </div>
+
+            <!-- Dark Mode Toggle -->
+            <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="다크모드 전환">
+              🌙
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" data-nav-toggle aria-label="모바일 메뉴 열기" aria-expanded="false">
+              ☰
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- ==================== MAIN CONTENT ==================== -->
+      <main class="insta-font-main">
+        <!-- Hero Section -->
+        <section class="insta-font-hero">
+          <div class="insta-font-hero__container">
+            <h1 class="insta-font-hero__title">인스타 폰트</h1>
+            <p class="insta-font-hero__subtitle">
+              입력한 문장을 다양한 스타일의 인스타 감성 폰트로 변환해보세요.
+            </p>
+            <p class="insta-font-hero__description">
+              원하는 스타일을 선택해서 바로 복사할 수 있어요.
+            </p>
+          </div>
+        </section>
+
+        <!-- Input Section -->
+        <section class="insta-font-input-section">
+          <div class="insta-font-container">
+            <div class="insta-font-input-card">
+              <h2 class="insta-font-input-card__title">변환할 텍스트 입력</h2>
+              
+              <!-- Language Support Notice -->
+              <div class="insta-font-notice">
+                <p class="insta-font-notice__text">
+                  ℹ️ <strong>영어와 숫자는 다양한 스타일로 변환됩니다.</strong> 한글은 스타일 변환이 적용되지 않거나 원문 그대로 표시될 수 있습니다.
+                </p>
+              </div>
+              
+              <textarea
+                id="insta-font-input"
+                class="insta-font-input"
+                placeholder="변환할 문장을 입력하세요 (영어 추천: Hello, Instagram!)"
+                aria-label="변환할 텍스트 입력"
+                rows="3"
+              ></textarea>
+              <button class="btn btn--primary-gradient insta-font-convert-btn" id="insta-font-convert-btn">
+                변환하기
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="insta-font-results-section">
+          <div class="insta-font-container">
+            <div class="insta-font-results-container">
+              <h2 class="insta-font-results-title">변환 결과</h2>
+              <div id="insta-font-results" class="insta-font-results-list">
+                <!-- Results will be inserted here -->
+              </div>
+              <div id="insta-font-empty-state" class="insta-font-empty-state" style="display: none;">
+                <p class="insta-font-empty-state__text">
+                  텍스트를 입력하고 변환하기 버튼을 눌러보세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="insta-font-tips-section">
+          <div class="insta-font-container">
+            <div class="insta-font-tips-card">
+              <h3 class="insta-font-tips-card__title">💡 사용 팁</h3>
+              <ul class="insta-font-tips-list">
+                <li>일부 폰트 스타일은 영어에서 가장 잘 작동합니다.</li>
+                <li>기기나 앱에 따라 특정 문자가 다르게 보일 수 있습니다.</li>
+                <li>지원되지 않는 문자는 원문 그대로 유지될 수 있습니다.</li>
+                <li>결과를 복사해 인스타 프로필, 소개글, 게시물 등에 사용할 수 있습니다.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ==================== FOOTER ==================== -->
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <h4 class="footer-title">🍿 EmojiRibbit</h4>
+            <p class="footer-desc">
+              세상의 모든 이모지를 한 곳에서. 의미 사전, 복사 도구, 해시태그 모음집, 인스타 폰트, 데코폰트, 도트 아트, 이모지 운세까지 완전 무료.
+            </p>
+          </div>
+          <nav class="footer-nav">
+            <ul class="footer-links">
+              <li><a href="dictionary.html">이모지 사전</a></li>
+              <li><a href="copy-tool.html">복사 도구</a></li>
+              <li><a href="hashtags.html">해시태그 모음집</a></li>
+              <li><a href="insta-font.html">인스타 폰트</a></li>
+              <li><a href="decofont.html">데코폰트</a></li>
+              <li><a href="dotart.html">도트 아트</a></li>
+              <li><a href="fortune.html">이모지 운세</a></li>
+            </ul>
+          </nav>
+          <div class="footer-bottom">
+            <p>&copy; 2024 EmojiRibbit. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Toast Container -->
+      <div id="toast-container" class="toast-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/insta-font.js"></script>
+  </body>
+</html>
