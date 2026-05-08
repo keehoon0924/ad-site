@@ -1,0 +1,423 @@
+/* 문의하기 페이지 — EmojiRibbit */
+
+.contact-page {
+  padding: 48px 20px 80px;
+}
+
+.contact-layout {
+  display: grid;
+  gap: 40px;
+  max-width: 1040px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr 1.15fr;
+    gap: 48px;
+  }
+}
+
+.contact-aside {
+  background: linear-gradient(145deg, #f5f3ff 0%, #faf5ff 50%, #fdf4ff 100%);
+  border: 1px solid #e9d5ff;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+html[data-theme="dark"] .contact-aside {
+  background: linear-gradient(145deg, #1e1b2e 0%, #251d35 100%);
+  border-color: #4c3f6b;
+}
+
+.contact-aside__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0a0e27;
+  margin: 0 0 16px;
+}
+
+html[data-theme="dark"] .contact-aside__title {
+  color: #f3f4f6;
+}
+
+.contact-aside__text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+html[data-theme="dark"] .contact-aside__text {
+  color: #c4b5fd;
+}
+
+.contact-aside__mail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #7c3aed;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-aside__mail:hover {
+  text-decoration: underline;
+}
+
+.contact-aside__list {
+  margin: 20px 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.65;
+}
+
+html[data-theme="dark"] .contact-aside__list {
+  color: #9ca3af;
+}
+
+.contact-form-wrap {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px 24px 32px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+}
+
+html[data-theme="dark"] .contact-form-wrap {
+  background: #111827;
+  border-color: #374151;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.contact-form__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a0e27;
+  margin: 0 0 8px;
+}
+
+html[data-theme="dark"] .contact-form__title {
+  color: #f9fafb;
+}
+
+.contact-form__lead {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+.contact-field {
+  margin-bottom: 18px;
+}
+
+.contact-field--hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+html[data-theme="dark"] .contact-label {
+  color: #e5e7eb;
+}
+
+.contact-label .req {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.contact-input,
+.contact-select,
+.contact-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  color: #111827;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+html[data-theme="dark"] .contact-input,
+html[data-theme="dark"] .contact-select,
+html[data-theme="dark"] .contact-textarea {
+  background: #1f2937;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+
+.contact-input:focus,
+.contact-select:focus,
+.contact-textarea:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+.contact-textarea {
+  min-height: 160px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.contact-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #4b5563;
+}
+
+html[data-theme="dark"] .contact-check {
+  color: #d1d5db;
+}
+
+.contact-check input {
+  margin-top: 4px;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: #7c3aed;
+}
+
+.contact-check a {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.contact-actions {
+  margin-top: 24px;
+}
+
+.contact-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 45%, #b946ef 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(118, 75, 162, 0.35);
+}
+
+.contact-submit:active {
+  transform: translateY(0);
+}
+
+.contact-msg {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: none;
+}
+
+.contact-msg.is-visible {
+  display: block;
+}
+
+.contact-msg--ok {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.contact-msg--err {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+html[data-theme="dark"] .contact-msg--ok {
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+  border-color: rgba(52, 211, 153, 0.35);
+}
+
+html[data-theme="dark"] .contact-msg--err {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border-color: rgba(248, 113, 113, 0.35);
+}
+
+.contact-hero.contact-page-hero {
+  background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 40%, #7c3aed 100%);
+}
+
+/* ========== 문의 완료 모달 ========== */
+body.contact-modal-open {
+  overflow: hidden;
+}
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.contact-modal[hidden] {
+  display: none !important;
+}
+
+.contact-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.contact-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  padding: 28px 24px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18);
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+html[data-theme="dark"] .contact-modal__dialog {
+  background: #111827;
+  border-color: #374151;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.contact-modal__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50%;
+}
+
+.contact-modal__title {
+  margin: 0 0 12px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0a0e27;
+}
+
+html[data-theme="dark"] .contact-modal__title {
+  color: #f9fafb;
+}
+
+.contact-modal__text {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #4b5563;
+}
+
+.contact-modal__hint {
+  margin: 0 0 22px;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #6b7280;
+}
+
+.contact-modal__hint a {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.contact-modal__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 400px) {
+  .contact-modal__actions {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.contact-modal__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 22px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #b946ef 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.contact-modal__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(118, 75, 162, 0.35);
+}
+
+.contact-modal__btn--ghost {
+  background: transparent;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+  box-shadow: none;
+}
+
+.contact-modal__btn--ghost:hover {
+  color: #7c3aed;
+  border-color: #c4b5fd;
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .contact-modal__btn--ghost {
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+html[data-theme="dark"] .contact-modal__btn--ghost:hover {
+  color: #e9d5ff;
+  border-color: #7c3aed;
+}
