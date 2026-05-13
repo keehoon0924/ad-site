@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://emojiribbit.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://emojiribbit.com/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://emojiribbit.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://emojiribbit.com/privacy.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://emojiribbit.com/terms.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://emojiribbit.com/dictionary.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://emojiribbit.com/copy-tool.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://emojiribbit.com/hashtags.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://emojiribbit.com/insta-font.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://emojiribbit.com/decofont.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://emojiribbit.com/dotart.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://emojiribbit.com/fortune.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://emojiribbit.com/trends.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://emojiribbit.com/mbti-emoji.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://emojiribbit.com/contact-success.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
